@@ -121,12 +121,7 @@ public class Project {
 	public String toXml(){
 		return null;
 	}
-	public Date getDate_begin() {
-		return date_begin;
-	}
-	public void setDate_begin(Date date_begin) {
-		this.date_begin = date_begin;
-	}
+	
 	
 
 }
