@@ -25,7 +25,7 @@ public class Project {
 	private String projector;
 	private int num_supporter;
 	private int likes;
-	private Date date_begin;
+	
 	private Date continue_until;
 	private int progress;
 	private Date date_get;
@@ -87,28 +87,25 @@ public class Project {
 	
 	public String toJson(){
 		StringBuilder sb = new StringBuilder();
-		sb.append("{");
+		sb.append("{\n");
 		sb.append("\"total_money\":");
 		sb.append(this.total_money);
 		sb.append("\n");
 		sb.append("\"title\":");
-		sb.append("\"this.title\"");
+		sb.append("\"" + this.title + "\"");
 		sb.append("\n");
 		sb.append("\"porpose_money\":");
 		sb.append(this.purpose_money);
 		sb.append("\n");
 		sb.append("\"projector\":");
-		sb.append("\"this.projector\"");
+		sb.append("\"" + this.projector + "\"");
 		sb.append("\n");
 		sb.append("\"num_supporter\":");
 		sb.append(this.num_supporter);
 		sb.append("\n");
 		sb.append("\"likes\":");
 		sb.append(this.likes);
-		sb.append("\n");
-		sb.append("\"date_begin\":");
-		sb.append(this.date_begin);
-		sb.append("\n");
+		sb.append("\n");		
 		sb.append("\"continue_until\":");
 		sb.append(this.continue_until);
 		sb.append("\n");
