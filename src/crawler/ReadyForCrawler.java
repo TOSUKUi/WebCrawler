@@ -1,4 +1,4 @@
-package crawler;
+package src.crawler;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -7,10 +7,14 @@ import java.util.regex.Pattern;
 
 import com.jaunt.component.*;
 
-import crawler.data.Project;
+import src.crawler.data.Project;
 
 import com.jaunt.*;
 
+/**
+ * ReadyForをクロールするためのやつ。
+ * ReadyForのプロジェクトの一覧のURLをとったりする実際のクローラーとしての役割がある。
+ */
 public class ReadyForCrawler {
 	UserAgent ua;
 	String url;
@@ -23,9 +27,12 @@ public class ReadyForCrawler {
 			System.err.println(e);
 		}
 		
-	}	
-	
-	
+	}
+
+	/**
+	 * ReadyForのproject階層下にあるプロジェクトをさらってきてくれるやつ。
+	 * @return projectのURLのセット
+     */
 	public HashSet<String> projectSet(){
 		Pattern project = Pattern.compile("https://readyfor.jp/projects/.+");
 		HashSet<String> outs = new HashSet<String>();		
@@ -45,7 +52,11 @@ public class ReadyForCrawler {
 		return outs;
 		
 	}
-	
+
+	/**
+	 * projectのURLを
+	 * @return
+     */
 	public Project toProject(){
 		this.ua.doc.findAttributeValues("Project-visual__body");
 		

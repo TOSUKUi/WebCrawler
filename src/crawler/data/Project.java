@@ -1,7 +1,11 @@
-package crawler.data;
+package src.crawler.data;
 
 import java.util.Date;
 
+/**
+ * ReadyForのプロジェクトのデータ型
+ * JSONやXMLで吐き出す時のデータ型として扱われる。
+ */
 public class Project {
 	
 	
